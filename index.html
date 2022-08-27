@@ -10,11 +10,11 @@
 </head>
 
 <body>
-  <div class="menu-fundo fundo-escondido" ></div>
+  <div class="menu-fundo fundo-escondido" onclick="toggleMenu()"></div>
   
   <header>
-    <img src="/imagens/logo.png">
-    <ion-icon name="people-sharp" ></ion-icon>
+    <img src="/imagens/">
+    <ion-icon name="people-sharp" onclick="toggleMenu()"></ion-icon>
   </header>
 
   <main>
@@ -29,7 +29,7 @@
       <span class="enviando">Enviando para Todos</span>
     </div>
     <button>
-      <ion-icon name="paper-plane-outline" ></ion-icon>
+      <ion-icon name="paper-plane-outline" onclick="enviarMensagem()"></ion-icon>
     </button>
   </footer>
 
@@ -43,11 +43,11 @@
     </ul>
     <h3 class="titulo-menu">Escolha a visibilidade:</h3>
     <ul class="visibilidades">
-      <li class="visibilidade-publico selecionado" >
+      <li class="visibilidade-publico selecionado" onclick="escolherVisibilidade('message', this)">
         <ion-icon name="lock-open" ></ion-icon>Público<ion-icon class="check" name="checkmark-outline">
         </ion-icon>
       </li>
-      <li class="visibilidade-privado" >
+      <li class="visibilidade-privado" onclick="escolherVisibilidade('private_message', this)">
         <ion-icon name="lock-closed" ></ion-icon>Reservadamente<ion-icon class="check" name="checkmark-outline">
         </ion-icon>
       </li>
@@ -55,7 +55,8 @@
   </aside>
 
   <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
-  
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./script.js"></script>
 </body>
 
 </html>

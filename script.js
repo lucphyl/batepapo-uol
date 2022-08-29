@@ -121,7 +121,7 @@ function carregarMensagens() {
 }
 
 function entrarSala() {
-  nickName = prompt("Qual é a sua graça?");
+  nickName = prompt("Qual é a seu nick ?");
   //Promise da função entrarSala - escopo local
   const promise = axios.post(`${urlAPI}/participants`, { name: nickName });
   promise.catch(errorEntrarSala);
